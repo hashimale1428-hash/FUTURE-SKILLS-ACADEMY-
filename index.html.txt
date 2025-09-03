@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduPortal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="page-login" class="page active center-card">
+  <img src="https://img.icons8.com/fluency/96/000000/school.png" class="logo">
+  <h2 class="brand-title">EduPortal</h2>
+  <p class="tagline">Learn anytime, anywhere</p>
+  <input id="input-name" type="text" placeholder="Enter your name">
+  <div class="role-row">
+    <label><input type="radio" name="role" value="student" checked> Student</label>
+    <label><input type="radio" name="role" value="admin"> Admin</label>
+  </div>
+  <div class="login-actions">
+    <button id="btn-login" class="big-btn">Login</button>
+    <button id="btn-guest" class="big-btn">Guest</button>
+  </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page">
+  <h2 id="user-greet"></h2>
+  <button id="btn-logout" class="big-btn">Logout</button>
+  <div id="subjects-row" class="subjects-column"></div>
+  <button id="open-live" class="big-btn">Live Class</button>
+  <button id="open-admin" class="big-btn">Admin Panel</button>
+</div>
+
+<!-- COURSES PAGE -->
+<div id="page-courses" class="page">
+  <img id="subject-icon" src="" style="width:80px;">
+  <h3 id="subject-name"></h3>
+  <div id="courses-row" class="courses-column"></div>
+  <button id="btn-back-courses" class="big-btn">Back</button>
+</div>
+
+<!-- LEVELS PAGE -->
+<div id="page-levels" class="page">
+  <h3 id="level-subject-name"></h3>
+  <div id="levels-row" class="levels-column"></div>
+  <button id="btn-back-levels" class="big-btn">Back</button>
+</div>
+
+<!-- LESSON PAGE -->
+<div id="page-lesson" class="page">
+  <h2 id="lesson-title"></h2>
+  <div class="video-wrap"><iframe id="yt-player" allowfullscreen></iframe></div>
+  <h4 id="video-title"></h4>
+  <p id="video-desc"></p>
+
+  <div class="chat-card">
+    <div class="chat-messages" id="chat-messages"></div>
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button type="button" id="emoji-btn" class="icon-btn">😊</button>
+      <button type="submit" class="icon-btn">Send</button>
+    </form>
+    <div id="emoji-picker" class="emoji-picker"></div>
+  </div>
+
+  <button id="btn-back-home-from-chat" class="big-btn">Back</button>
+</div>
+
+<!-- ADMIN PAGE -->
+<div id="page-admin" class="page center-card">
+  <h2>Admin Panel</h2>
+  <table class="admin-table" id="student-table">
+    <thead><tr><th>Name</th><th>Role</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <form id="admin-video-form" class="admin-form">
+    <select id="admin-subject-select"></select>
+    <input id="admin-course-name" type="text" placeholder="Course Title" required>
+    <input id="admin-yt-id" type="text" placeholder="YouTube ID" required>
+    <button class="admin-btn">Add Video</button>
+  </form>
+  <button id="btn-back-home-from-admin" class="big-btn">Back</button>
+</div>
+
+<!-- LIVE CLASS PAGE -->
+<div id="page-live-class" class="page center-card">
+  <h2>Live Class</h2>
+  <div class="chat-card">
+    <div class="chat-messages" id="live-chat-messages"></div>
+    <form id="live-chat-form" class="chat-form">
+      <input type="text" id="live-chat-input" placeholder="Type a message...">
+      <button type="submit" class="icon-btn">Send</button>
+    </form>
+  </div>
+  <button id="btn-back-home-from-live" class="big-btn">Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
